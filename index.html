@@ -1,1 +1,637 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Great Generation Disciplinary Camp — Witbank, Emalahleni. Discipline Today. Leaders Tomorrow.">
+<title>Great Generation Disciplinary Camp | Home</title>
+<style>
+:root {
+  --gold: #e6b72e;
+  --gold-light: #ffe17a;
+  --black: #080808;
+  --panel: #141414;
+  --muted: #bdb8aa;
+  --line: #574316;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1160px, 92%); margin: auto; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #080808ed;
+  border-bottom: 1px solid #45350f;
+  backdrop-filter: blur(12px);
+}
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.wordmark {
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: .1em;
+  line-height: 1.15;
+}
+.wordmark small {
+  display: block;
+  color: white;
+  font-size: 10px;
+  letter-spacing: .2em;
+  margin-top: 5px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: #e7e1d3;
+}
+nav a:hover { color: var(--gold); }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  border-radius: 4px;
+  background: linear-gradient(135deg,var(--gold-light),#b98512);
+  color: #111;
+  font-weight: 900;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+}
+.button.secondary {
+  background: transparent;
+  color: var(--gold);
+}
+
+.hero {
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background:
+    linear-gradient(90deg,#050505 0%,#050505e8 45%,#05050555 100%),
+    url('assets/great-generation-original-poster.jpg')
+    center 38% / cover no-repeat;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 150px;
+  background: linear-gradient(transparent,var(--black));
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 90px 0;
+  max-width: 750px;
+}
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(43px,7vw,82px);
+  line-height: .98;
+  letter-spacing: -.045em;
+  margin: 17px 0;
+}
+h1 span, .gold { color: var(--gold); }
+.hero p {
+  max-width: 620px;
+  color: #e2ded5;
+  font-size: 18px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px;
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 38px;
+}
+.fact {
+  border-left: 2px solid var(--gold);
+  padding-left: 13px;
+  color: #d5d0c5;
+  font-size: 13px;
+}
+.fact strong {
+  display: block;
+  color: white;
+  font-size: 18px;
+}
+
+section { padding: 78px 0; }
+.section-title {
+  max-width: 740px;
+  margin-bottom: 32px;
+}
+.section-title h2 {
+  font-size: clamp(30px,4vw,48px);
+  line-height: 1.08;
+  margin: 10px 0;
+}
+.section-title p { color: var(--muted); margin: 0; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+  align-items: center;
+}
+.emblem-card {
+  min-height: 330px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: radial-gradient(circle at center,#4a350c,#151109 55%,#0b0b0b);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 30px;
+}
+.shield {
+  width: 150px;
+  height: 165px;
+  border: 5px solid var(--gold);
+  border-radius: 48% 48% 43% 43%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 66px;
+  text-shadow: 0 0 18px #e6b72e66;
+  box-shadow: 0 0 35px #e6b72e33;
+}
+.emblem-card h3 {
+  color: var(--gold);
+  letter-spacing: .1em;
+  margin: 15px 0 0;
+}
+.emblem-card p {
+  margin: 2px 0;
+  color: white;
+  letter-spacing: .16em;
+  font-size: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
+}
+.card {
+  background: linear-gradient(145deg,#191919,#101010);
+  border: 1px solid #403111;
+  border-radius: 8px;
+  padding: 24px;
+}
+.card .symbol { font-size: 26px; color: var(--gold); }
+.card h3 { color: var(--gold); margin: 7px 0; }
+.card p { color: var(--muted); margin: 0; }
+
+.prices {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+.price {
+  background: #111;
+  border: 1px solid #634b15;
+  border-radius: 8px;
+  padding: 22px 12px;
+  text-align: center;
+}
+.price strong { display: block; font-size: 17px; }
+.amount {
+  font-size: clamp(24px,3vw,37px);
+  font-weight: 900;
+  color: var(--gold);
+  margin: 8px 0;
+}
+.notice {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: #211a0b;
+}
+.notice strong { font-size: 22px; color: var(--gold); }
+
+.poster {
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid #725718;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #050505;
+  box-shadow: 0 18px 55px #0009;
+}
+.poster img { display: block; width: 100%; height: auto; }
+
+.founder {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 30px;
+  align-items: center;
+}
+.founder-card {
+  text-align: center;
+  padding: 35px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: linear-gradient(145deg,#241b0a,#101010);
+}
+.initials {
+  width: 112px;
+  height: 112px;
+  margin: auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.register-panel {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #111;
+  padding: 28px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: #ddd;
+  margin-bottom: 6px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  background: #090909;
+  color: white;
+  border: 1px solid #574316;
+  border-radius: 4px;
+  font: inherit;
+}
+textarea { min-height: 100px; resize: vertical; }
+.full { grid-column: 1/-1; }
+.small { font-size: 12px; color: var(--muted); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+.contact-grid .card a {
+  color: var(--gold);
+  font-weight: bold;
+}
+footer {
+  border-top: 1px solid #403111;
+  padding: 25px 0;
+  color: #aaa;
+  font-size: 13px;
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media(max-width:850px) {
+  nav { display: none; }
+  .about-grid, .founder { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .prices { grid-template-columns: repeat(2,1fr); }
+  .hero { min-height: 620px; }
+}
+@media(max-width:500px) {
+  .nav { min-height: 66px; }
+  .prices { gap: 8px; }
+  .price { padding: 16px 7px; }
+  form { grid-template-columns: 1fr; }
+  .full { grid-column: auto; }
+  .hero p { font-size: 16px; }
+  .actions .button { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="wordmark" href="#home">
+      GREAT GENERATION
+      <small>DISCIPLINARY CAMP</small>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#packages">Packages</a>
+      <a href="#poster">Original poster</a>
+      <a href="#founder">Founder</a>
+      <a href="#register">Register</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="button" href="#register">APPLY NOW</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">Witbank · Emalahleni · Mpumalanga</div>
+    <h1>DISCIPLINE TODAY.<br><span>LEADERS TOMORROW.</span></h1>
+    <p>Welcome to Great Generation Disciplinary Camp — a camp focused on discipline, leadership and physical training for young people and adults aged 13 to 35.</p>
+    <div class="actions">
+      <a class="button" href="#register">REGISTER YOUR INTEREST</a>
+      <a class="button secondary" href="https://wa.me/27835085179" target="_blank" rel="noopener">WHATSAPP THE CAMP</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>13–35</strong>Age range</div>
+      <div class="fact"><strong>5–30 days</strong>Package durations</div>
+      <div class="fact"><strong>Witbank</strong>Emalahleni</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="eyebrow">Who we are</div>
+      <div class="section-title">
+        <h2>Building a <span class="gold">greater generation.</span></h2>
+        <p>Great Generation Disciplinary Camp is based in Witbank, Emalahleni. Our stated focus is discipline, leadership and physical training.</p>
+      </div>
+      <p>Our guiding message is simple: <strong class="gold">Discipline Today • Leaders Tomorrow.</strong></p>
+      <p>Camp dates and availability are confirmed directly with the camp team. Please enquire before making travel arrangements or payment.</p>
+    </div>
+    <div class="emblem-card">
+      <div>
+        <div class="shield">♛</div>
+        <h3>GREAT GENERATION</h3>
+        <p>DISCIPLINARY CAMP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programmes">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Our focus</div>
+      <h2>Purposeful training. <span class="gold">Stronger character.</span></h2>
+      <p>Our programme areas reflect the camp's stated activities.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="symbol">✦</div>
+        <h3>Discipline</h3>
+        <p>Building self-discipline, consistency, accountability and respect.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">♛</div>
+        <h3>Leadership</h3>
+        <p>Encouraging responsibility, teamwork, confidence and positive leadership.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">◆</div>
+        <h3>Physical training</h3>
+        <p>Structured physical activities that support fitness, resilience and commitment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Camp packages</div>
+      <h2>Choose your <span class="gold">programme length.</span></h2>
+      <p>All prices below are reproduced from the supplied camp poster and are in South African rand.</p>
+    </div>
+    <div class="prices">
+      <div class="price"><strong>5 DAYS</strong><div class="amount">R2,500</div><span class="small">Package price</span></div>
+      <div class="price"><strong>10 DAYS</strong><div class="amount">R4,500</div><span class="small">Package price</span></div>
+      <div class="price"><strong>15 DAYS</strong><div class="amount">R6,500</div><span class="small">Package price</span></div>
+      <div class="price"><strong>30 DAYS</strong><div class="amount">R15,000</div><span class="small">Package price</span></div>
+    </div>
+    <div class="notice">
+      <strong>Compulsory R400</strong><br>
+      Physical examination and drug tests, as stated on the original poster. Confirm payment instructions and exactly what is covered with the camp team.
+    </div>
+    <p class="small">The poster lists December date ranges. The year and next available intake have not yet been confirmed; contact the camp team for current dates.</p>
+  </div>
+</section>
+
+<section id="poster">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Original artwork</div>
+      <h2>The original <span class="gold">camp poster.</span></h2>
+      <p>The supplied poster is shown below as provided, preserving its original photographs, emblem, wording and price-list artwork.</p>
+    </div>
+    <div class="poster">
+      <img src="assets/great-generation-original-poster.jpg" alt="Original Great Generation Disciplinary Camp poster with camp photographs, crown and shield emblem, packages, prices and contact details">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Camp arrangements</div>
+      <h2>Accommodation, meals <span class="gold">&amp; training.</span></h2>
+      <p>The information supplied for the website says package fees include accommodation, meals, training and discipline. Confirm the exact arrangements for your chosen intake with the camp team.</p>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="container founder">
+    <div class="founder-card">
+      <div class="initials">MJZ</div>
+      <h2 class="gold">MJ ZWANE</h2>
+      <p>CEO &amp; FOUNDER</p>
+    </div>
+    <div>
+      <div class="eyebrow">Founder &amp; leadership</div>
+      <div class="section-title">
+        <h2>A vision for a <span class="gold">greater generation.</span></h2>
+        <p>Great Generation Disciplinary Camp is led by CEO and Founder MJ Zwane. The camp's guiding message is “Discipline Today • Leaders Tomorrow.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="register">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Take the first step</div>
+      <h2>Registration <span class="gold">enquiry.</span></h2>
+      <p>Complete this form to prepare a registration enquiry in WhatsApp. You must press Send in WhatsApp to submit it to the camp team.</p>
+    </div>
+    <div class="register-panel">
+      <form id="campForm">
+        <div>
+          <label for="fullName">Participant full name *</label>
+          <input id="fullName" required autocomplete="name" placeholder="Full name">
+        </div>
+        <div>
+          <label for="age">Participant age *</label>
+          <input id="age" type="number" min="13" max="35" required placeholder="13–35">
+        </div>
+        <div>
+          <label for="phone">Contact number *</label>
+          <input id="phone" type="tel" required placeholder="Your phone number">
+        </div>
+        <div>
+          <label for="package">Preferred package *</label>
+          <select id="package" required>
+            <option value="">Select a package</option>
+            <option>5 days — R2,500</option>
+            <option>10 days — R4,500</option>
+            <option>15 days — R6,500</option>
+            <option>30 days — R15,000</option>
+          </select>
+        </div>
+        <div>
+          <label for="intake">Preferred intake</label>
+          <input id="intake" placeholder="Please advise available dates">
+        </div>
+        <div>
+          <label for="guardian">Parent / guardian name (if under 18)</label>
+          <input id="guardian" placeholder="Parent or guardian full name">
+        </div>
+        <div class="full">
+          <label for="notes">Additional questions or information</label>
+          <textarea id="notes" placeholder="Your message to the camp team"></textarea>
+        </div>
+        <div class="full">
+          <label>
+            <input type="checkbox" id="consent" required style="width:auto;margin-right:8px">
+            I agree that these details may be shared with the camp team to respond to this enquiry.
+          </label>
+        </div>
+        <div class="full">
+          <p class="small">For participants under 18, a parent or legal guardian must be involved and provide any required consent. Submitting an enquiry does not confirm a place. Do not enter medical or other sensitive personal information in this form.</p>
+          <button class="button" type="submit">CONTINUE TO WHATSAPP</button>
+        </div>
+      </form>
+      <p class="small" id="formStatus" role="status"></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Contact the <span class="gold">camp team.</span></h2>
+      <p>Ask about current dates, availability, package inclusions and payment arrangements before paying.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Phone / WhatsApp</h3>
+        <a href="tel:+27835085179">083 508 5179</a>
+      </div>
+      <div class="card">
+        <h3>Email</h3>
+        <a href="mailto:greater.gendc@gmail.com">greater.gendc@gmail.com</a>
+      </div>
+      <div class="card">
+        <h3>Location</h3>
+        <p>Witbank, Emalahleni, Mpumalanga, South Africa</p>
+      </div>
+      <div class="card">
+        <h3>Camp motto</h3>
+        <p class="gold"><strong>Discipline Today • Leaders Tomorrow</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>
+      <strong class="gold">GREAT GENERATION DISCIPLINARY CAMP</strong><br>
+      Discipline Today • Leaders Tomorrow
+    </div>
+    <div>© <span id="year"></span> Great Generation Disciplinary Camp</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('campForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const age = Number(document.getElementById('age').value);
+
+  if (age < 13 || age > 35) {
+    alert('Please enter an age between 13 and 35.');
+    return;
+  }
+
+  const rows = [
+    ['Participant', document.getElementById('fullName').value],
+    ['Age', document.getElementById('age').value],
+    ['Contact number', document.getElementById('phone').value],
+    ['Preferred package', document.getElementById('package').value],
+    ['Preferred intake', document.getElementById('intake').value || 'Please advise'],
+    ['Parent / guardian', document.getElementById('guardian').value || 'Not provided'],
+    ['Additional information', document.getElementById('notes').value || 'None']
+  ];
+
+  const message =
+    'Great Generation Disciplinary Camp — Registration Enquiry\n\n' +
+    rows.map(row => row[0] + ': ' + row[1]).join('\n');
+
+  document.getElementById('formStatus').textContent =
+    'WhatsApp is opening. Press Send there to submit your enquiry.';
+
+  window.open(
+    'https://wa.me/27835085179?text=' + encodeURIComponent(message),
+    '_blank',
+    'noopener'
+  );
+});
+</script>
+</body>
+</html>
+
