@@ -1,1 +1,529 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about Great Generation Disciplinary Camp, our mission, vision and commitment to discipline and leadership.">
+<title>About Us | Great Generation Disciplinary Camp</title>
+
+<style>
+:root {
+  --gold: #e6b72e;
+  --gold-light: #ffe17a;
+  --black: #080808;
+  --panel: #141414;
+  --muted: #bdb8aa;
+  --line: #574316;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+header {
+  background: #080808ed;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo small {
+  display: block;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+nav a:hover { color: var(--gold); }
+
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg,var(--gold-light),#b98512);
+  color: #111;
+  padding: 12px 22px;
+  font-weight: 900;
+  border-radius: 4px;
+}
+
+.hero {
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg,#050505 0%,#050505e8 55%,#05050555 100%),
+    url('assets/great-generation-original-poster.jpg')
+    center/cover no-repeat;
+}
+
+.hero-content {
+  padding: 90px 0;
+  max-width: 780px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(42px,7vw,75px);
+  line-height: 1.05;
+  margin: 18px 0;
+}
+
+h1 span, .gold { color: var(--gold); }
+
+.hero p {
+  color: #ddd;
+  font-size: 18px;
+  max-width: 650px;
+}
+
+section { padding: 85px 0; }
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px,4vw,48px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.section-heading p { color: var(--muted); }
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.identity {
+  min-height: 350px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 30px;
+  background: radial-gradient(circle,#44320e,#111 70%);
+}
+
+.identity img {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.identity h3 {
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg,#191919,#101010);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.card .icon {
+  color: var(--gold);
+  font-size: 32px;
+}
+
+.card h3 {
+  color: var(--gold);
+  font-size: 21px;
+}
+
+.card p { color: var(--muted); }
+
+.values {
+  background: #111;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.value-item {
+  border-left: 3px solid var(--gold);
+  padding: 12px 20px;
+  background: #191919;
+}
+
+.value-item h3 { color: var(--gold); margin: 0 0 5px; }
+.value-item p { color: var(--muted); margin: 0; }
+
+.statement {
+  text-align: center;
+  padding: 65px 25px;
+  border: 1px solid var(--gold);
+  background: radial-gradient(circle,#33270d,#0b0b0b 75%);
+  border-radius: 10px;
+}
+
+.statement h2 {
+  font-size: clamp(28px,4vw,46px);
+  color: var(--gold);
+}
+
+.statement p { color: #ddd; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media(max-width:850px) {
+  nav { display: none; }
+  .intro-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .values-list { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      GREAT GENERATION
+      <small>DISCIPLINARY CAMP</small>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programmes.html">Programmes</a>
+      <a href="packages.html">Packages</a>
+      <a href="founder.html">Founder</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="registration.html" class="button">REGISTER</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">Who we are</div>
+
+    <h1>
+      ABOUT <span>GREAT GENERATION.</span>
+    </h1>
+
+    <p>
+      Building discipline, developing character and
+      encouraging leadership for a greater generation.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container intro-grid">
+
+    <div>
+      <div class="eyebrow">Our identity</div>
+
+      <div class="section-heading">
+        <h2>
+          More than a camp.
+          <span class="gold">A foundation for growth.</span>
+        </h2>
+
+        <p>
+          Great Generation Disciplinary Camp is based in
+          Witbank, Emalahleni, Mpumalanga, South Africa.
+        </p>
+      </div>
+
+      <p>
+        Our camp focuses on discipline, leadership and
+        physical training for participants aged 13 to 35.
+      </p>
+
+      <p>
+        We aim to create an environment where participants
+        can develop personal responsibility, confidence,
+        respect and a stronger commitment to their goals.
+      </p>
+
+      <p>
+        Our philosophy is built around one message:
+        <strong class="gold">
+          Discipline Today • Leaders Tomorrow.
+        </strong>
+      </p>
+    </div>
+
+    <div class="identity">
+      <div>
+        <img
+          src="assets/great-generation-logo.png"
+          alt="Official Great Generation Disciplinary Camp logo"
+        >
+        <h3>OUR IDENTITY</h3>
+        <p>DISCIPLINE TODAY • LEADERS TOMORROW</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our purpose</div>
+      <h2>What drives <span class="gold">our camp.</span></h2>
+      <p>
+        Our foundation is centred on personal development
+        and positive growth.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">♛</div>
+        <h3>Our Mission</h3>
+        <p>
+          To provide a structured camp environment focused
+          on discipline, leadership and physical training,
+          encouraging participants to develop responsibility,
+          confidence and positive habits.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">◆</div>
+        <h3>Our Vision</h3>
+        <p>
+          To contribute towards a generation that values
+          discipline, respects others, takes responsibility
+          and strives to become positive leaders.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✦</div>
+        <h3>Our Purpose</h3>
+        <p>
+          To encourage personal growth through discipline,
+          leadership development, teamwork and physical
+          activities.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">What we stand for</div>
+      <h2>Our core <span class="gold">values.</span></h2>
+      <p>
+        The principles that guide the Great Generation identity.
+      </p>
+    </div>
+
+    <div class="values-list">
+
+      <div class="value-item">
+        <h3>Discipline</h3>
+        <p>Developing consistency, self-control and accountability.</p>
+      </div>
+
+      <div class="value-item">
+        <h3>Respect</h3>
+        <p>Encouraging respect for oneself, others and the community.</p>
+      </div>
+
+      <div class="value-item">
+        <h3>Leadership</h3>
+        <p>Promoting responsibility, teamwork and positive influence.</p>
+      </div>
+
+      <div class="value-item">
+        <h3>Commitment</h3>
+        <p>Encouraging participants to remain dedicated to their goals.</p>
+      </div>
+
+      <div class="value-item">
+        <h3>Personal Growth</h3>
+        <p>Supporting confidence, resilience and continuous improvement.</p>
+      </div>
+
+      <div class="value-item">
+        <h3>Unity</h3>
+        <p>Building cooperation and a sense of shared purpose.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our activities</div>
+      <h2>Three pillars of <span class="gold">development.</span></h2>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">01</div>
+        <h3>Discipline Training</h3>
+        <p>
+          Activities focused on responsibility, respect,
+          routine and personal accountability.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">02</div>
+        <h3>Leadership Development</h3>
+        <p>
+          Activities that encourage teamwork, confidence,
+          communication and leadership.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">03</div>
+        <h3>Physical Training</h3>
+        <p>
+          Structured physical activities designed to
+          encourage fitness, resilience and commitment.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="statement">
+      <div class="eyebrow">Our guiding philosophy</div>
+
+      <h2>DISCIPLINE TODAY.<br>LEADERS TOMORROW.</h2>
+
+      <p>
+        Every generation has the opportunity to build
+        a stronger future through responsibility,
+        character and positive action.
+      </p>
+
+      <a href="programmes.html" class="button">
+        EXPLORE OUR PROGRAMMES
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <div>
+      <strong class="gold">GREAT GENERATION DISCIPLINARY CAMP</strong>
+      <br>
+      Witbank, Emalahleni, Mpumalanga
+    </div>
+
+    <div>
+      <a href="index.html">Home</a> |
+      <a href="founder.html">Founder</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      © <span id="year"></span> Great Generation Disciplinary Camp
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
