@@ -1,1 +1,411 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Programmes | Great Generation Disciplinary Camp</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #fff;
+}
+
+header {
+    background: #111;
+    padding: 22px 8%;
+    text-align: center;
+    border-bottom: 1px solid #c9a64e;
+}
+
+header h2 {
+    color: #d6b45c;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 7px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+nav {
+    padding: 16px;
+    text-align: center;
+    background: #151515;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d6b45c;
+}
+
+.hero {
+    padding: 85px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #171717, #080808);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #d6b45c;
+}
+
+.hero p {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    padding: 55px 20px 25px;
+}
+
+.section-title h2 {
+    color: #d6b45c;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #999;
+}
+
+.programmes {
+    padding: 30px 7% 75px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.programme {
+    background: linear-gradient(145deg, #191919, #101010);
+    border: 1px solid #393020;
+    border-radius: 13px;
+    padding: 30px 25px;
+    transition: 0.3s;
+}
+
+.programme:hover {
+    transform: translateY(-6px);
+    border-color: #d6b45c;
+}
+
+.number {
+    color: #d6b45c;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.programme h3 {
+    color: #d6b45c;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.programme p {
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.programme ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.programme li {
+    padding: 9px 0;
+    color: #ddd;
+    border-bottom: 1px solid #292929;
+    font-size: 13px;
+}
+
+.programme li::before {
+    content: "✓ ";
+    color: #d6b45c;
+}
+
+.values {
+    padding: 65px 8%;
+    background: #121212;
+    text-align: center;
+}
+
+.values h2 {
+    color: #d6b45c;
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+
+.values p {
+    max-width: 750px;
+    margin: auto;
+    color: #aaa;
+    line-height: 1.9;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.value {
+    padding: 22px 10px;
+    border: 1px solid #423820;
+    border-radius: 9px;
+    color: #d6b45c;
+    font-weight: bold;
+}
+
+.cta {
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #d6b45c;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.cta p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #d6b45c;
+    color: #080808;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+footer {
+    background: #111;
+    border-top: 1px solid #393020;
+    padding: 30px 15px;
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer strong {
+    color: #d6b45c;
+}
+
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>GREAT GENERATION</h2>
+    <p>DISCIPLINARY CAMP</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="founder.html">Founder</a>
+    <a href="packages.html">Packages</a>
+    <a href="programmes.html">Programmes</a>
+</nav>
+
+<section class="hero">
+    <h1>OUR <span>PROGRAMMES</span></h1>
+
+    <p>
+        Developing disciplined individuals through structured
+        training, personal responsibility, leadership development
+        and positive behavioural transformation.
+        Building a generation that understands purpose,
+        respect and accountability.
+    </p>
+</section>
+
+<section class="section-title">
+    <h2>WHAT WE OFFER</h2>
+    <p>Programmes designed to build character and develop potential.</p>
+</section>
+
+<section class="programmes">
+
+    <div class="programme">
+        <div class="number">PROGRAMME 01</div>
+        <h3>Discipline & Character Development</h3>
+        <p>
+            Developing self-control, responsibility and
+            positive personal habits.
+        </p>
+        <ul>
+            <li>Personal discipline</li>
+            <li>Respect and responsibility</li>
+            <li>Self-control</li>
+            <li>Accountability</li>
+        </ul>
+    </div>
+
+    <div class="programme">
+        <div class="number">PROGRAMME 02</div>
+        <h3>Leadership Development</h3>
+        <p>
+            Helping participants understand leadership,
+            decision-making and positive influence.
+        </p>
+        <ul>
+            <li>Leadership principles</li>
+            <li>Teamwork</li>
+            <li>Decision-making</li>
+            <li>Communication skills</li>
+        </ul>
+    </div>
+
+    <div class="programme">
+        <div class="number">PROGRAMME 03</div>
+        <h3>Physical Fitness & Wellness</h3>
+        <p>
+            Encouraging healthy routines, physical activity
+            and personal wellbeing.
+        </p>
+        <ul>
+            <li>Fitness activities</li>
+            <li>Physical endurance</li>
+            <li>Healthy lifestyle habits</li>
+            <li>Team exercises</li>
+        </ul>
+    </div>
+
+    <div class="programme">
+        <div class="number">PROGRAMME 04</div>
+        <h3>Personal Growth & Mindset</h3>
+        <p>
+            Helping participants develop confidence,
+            purpose and a positive attitude.
+        </p>
+        <ul>
+            <li>Confidence building</li>
+            <li>Goal setting</li>
+            <li>Positive thinking</li>
+            <li>Personal development</li>
+        </ul>
+    </div>
+
+    <div class="programme">
+        <div class="number">PROGRAMME 05</div>
+        <h3>Life Skills & Responsibility</h3>
+        <p>
+            Preparing participants to make responsible
+            choices in everyday life.
+        </p>
+        <ul>
+            <li>Time management</li>
+            <li>Problem solving</li>
+            <li>Personal hygiene</li>
+            <li>Everyday responsibility</li>
+        </ul>
+    </div>
+
+    <div class="programme">
+        <div class="number">PROGRAMME 06</div>
+        <h3>Teamwork & Social Development</h3>
+        <p>
+            Building cooperation, respect and positive
+            relationships with others.
+        </p>
+        <ul>
+            <li>Group activities</li>
+            <li>Mutual respect</li>
+            <li>Conflict resolution</li>
+            <li>Cooperation</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="values">
+    <h2>THE VALUES WE BUILD</h2>
+
+    <p>
+        At Great Generation Disciplinary Camp, we believe
+        that transformation begins with character.
+        Our approach encourages discipline, respect,
+        commitment and personal growth.
+    </p>
+
+    <div class="values-grid">
+        <div class="value">DISCIPLINE</div>
+        <div class="value">RESPECT</div>
+        <div class="value">INTEGRITY</div>
+        <div class="value">LEADERSHIP</div>
+        <div class="value">ACCOUNTABILITY</div>
+        <div class="value">COMMITMENT</div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>YOUR TRANSFORMATION STARTS HERE</h2>
+
+    <p>
+        Take the first step towards becoming a more
+        disciplined, responsible and confident individual.
+    </p>
+
+    <a href="packages.html" class="btn">
+        VIEW OUR PACKAGES
+    </a>
+</section>
+
+<footer>
+    <p><strong>GREAT GENERATION DISCIPLINARY CAMP</strong></p>
+    <p>Founded by MJ Zwane | CEO & Founder</p>
+    <p>Witbank / Emalahleni</p>
+    <p>© 2026 Great Generation Disciplinary Camp. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
